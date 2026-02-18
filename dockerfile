@@ -14,6 +14,7 @@ RUN chmod +x /usr/local/bin/touch-mode.sh
 RUN echo "/usr/local/bin/touch-mode.sh &" >> /etc/xdg/autostart/touch-mode.desktop
 
 RUN apt install -y onboard
+RUN apt install -y libinput-tools xdotool
 
 ENV QT_QPA_PLATFORMTHEME=qt6ct
 ENV XDG_CURRENT_DESKTOP=XFCE
