@@ -8,6 +8,10 @@ WIDTH=$(xdpyinfo | awk '/dimensions/{print $2}' | cut -d'x' -f1)
 HEIGHT=$(xdpyinfo | awk '/dimensions/{print $2}' | cut -d'x' -f2)
 echo "Detected width: $WIDTH"
 
+# GTK / XFCE touch
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchscreen tap-to-click true
+
 # Slightly smaller for padding
 WIN_W=$(( WIDTH * 95 / 100 ))
 WIN_H=$(( HEIGHT * 95 / 100 ))
