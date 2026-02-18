@@ -13,5 +13,7 @@ COPY touch-mode.sh /usr/local/bin/touch-mode.sh
 RUN chmod +x /usr/local/bin/touch-mode.sh
 RUN echo "/usr/local/bin/touch-mode.sh &" >> /etc/xdg/autostart/touch-mode.desktop
 
+RUN apt install -y onboard
+
 ENV QT_QPA_PLATFORMTHEME=qt6ct
 ENV XDG_CURRENT_DESKTOP=XFCE
