@@ -10,8 +10,8 @@ echo "Detected width: $WIDTH"
 
 if [ "$WIDTH" -lt 800 ]; then
     # Mobile mode
-    ICON=$(( $ICON * 1.5 ))
-    PANEL=$(( $PANEL * 1.5 ))
+    ICON=$(( $ICON * 2 ))
+    PANEL=$(( $PANEL * 2 ))
     export QT_SCALE_FACTOR=1
     export GDK_SCALE=1
     export QT_TOUCHSCREEN_CALIBRATION=1
@@ -39,5 +39,7 @@ xfconf-query -c xfce4-desktop -p /desktop-icons/icon-size -s $ICON
 
 # Optional: Enable touchscreen mode
 xfconf-query -c xsettings -p /Gtk/TouchscreenMode -s 1
+
+xfdesktop --reload
 
 echo "Touch scaling applied."
