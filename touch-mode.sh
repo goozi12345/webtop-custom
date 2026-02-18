@@ -13,6 +13,7 @@ if [ "$WIDTH" -lt 800 ]; then
     DPI=192
     PANEL=64
     ICON=96
+    onboard &
 elif [ "$WIDTH" -lt 1400 ]; then
     echo "Tablet mode"
     DPI=144
