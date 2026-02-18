@@ -18,6 +18,7 @@ export QT_SCREEN_SCALE_FACTORS=1
 export QT_USE_NATIVE_WINDOWS=0
 export QT_TOUCHSCREEN_CALIBRATION=1
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_ENABLE_HIGHDPI_SCALING=1
 # Optional fix for stubborn dialogs
 APP=$(xdotool search --onlyvisible --name "ComicTagger" | head -n1)
 xdotool windowsize $APP $WIN_W $WIN_H
