@@ -9,5 +9,8 @@ RUN apt update && apt install -y \
     libxcb-keysyms1 \
     libxcb-render-util0
 
+COPY touch-mode.sh /usr/local/bin/touch-mode.sh
+RUN chmod +x /usr/local/bin/touch-mode.sh
+
 ENV QT_QPA_PLATFORMTHEME=qt6ct
 ENV XDG_CURRENT_DESKTOP=XFCE
