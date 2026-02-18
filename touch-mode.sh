@@ -46,6 +46,8 @@ elif [ "$WIDTH" -lt 1400 ]; then
     export GDK_SCALE=1.2
     export QT_TOUCHSCREEN_CALIBRATION=1
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export QT_SCREEN_SCALE_FACTORS=1.5
+    export QT_FONT_DPI=144     
     APP=$(xdotool search --onlyvisible --name "ComicTagger")
     xdotool windowsize $APP $WIN_W $WIN_H
     xdotool windowmove $APP 0 0
