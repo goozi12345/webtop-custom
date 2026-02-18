@@ -27,10 +27,13 @@ if [ "$WIDTH" -lt 800 ]; then
     # Mobile mode
     ICON=$(( $ICON * 2 ))
     PANEL=$(( $PANEL * 2 ))
-    export QT_SCALE_FACTOR=1
+    export QT_SCALE_FACTOR=1.5
     export GDK_SCALE=1
     export QT_TOUCHSCREEN_CALIBRATION=1
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export QT_AUTO_SCREEN_SCALE_FACTOR=1       # auto-detect screen scaling
+    export QT_SCREEN_SCALE_FACTORS=1.5
+    export QT_FONT_DPI=144                      # increases font/button size
     APP=$(xdotool search --onlyvisible --name "ComicTagger")
     xdotool windowsize $APP $WIN_W $WIN_H
     xdotool windowmove $APP 0 0
