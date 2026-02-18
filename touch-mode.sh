@@ -14,12 +14,16 @@ if [ "$WIDTH" -lt 800 ]; then
     PANEL=$(( $PANEL * 1.5 ))
     export QT_SCALE_FACTOR=1
     export GDK_SCALE=1
+    export QT_TOUCHSCREEN_CALIBRATION=1
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 elif [ "$WIDTH" -lt 1400 ]; then
     # Tablet mode
     ICON=$(( $ICON * 1.2 ))
     PANEL=$(( $PANEL * 1.2 ))
     export QT_SCALE_FACTOR=1.2
     export GDK_SCALE=1.2
+    export QT_TOUCHSCREEN_CALIBRATION=1
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 else
     # Desktop mode
     ICON=$ICON
